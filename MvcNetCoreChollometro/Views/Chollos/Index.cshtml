@@ -1,0 +1,143 @@
+﻿@model List<Chollo>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chollometro - Ofertas y Descuentos</title>
+    <style>
+        :root {
+            --primary-color: #ff5c39;
+            --secondary-color: #333;
+            --light-gray: #f4f4f4;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .stats {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+            .stats h2 {
+                color: var(--primary-color);
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+        .chollo-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+
+            .chollo-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            }
+
+            .chollo-card h2 {
+                color: var(--secondary-color);
+                margin-top: 0;
+                font-size: 1.4rem;
+            }
+
+        .chollo-link {
+            display: inline-block;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+
+            .chollo-link a {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+                .chollo-link a:hover {
+                    text-decoration: underline;
+                }
+
+        .chollo-description {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Job Chollometro</h1>
+        </header>
+
+        <div class="stats">
+            <h2>Número de chollos: @ViewData["ELEMENTOS"]</h2>
+        </div>
+
+        @foreach (Chollo chollo in Model)
+        {
+            <div class="chollo-card">
+                <h2>@chollo.Titulo</h2>
+                <div class="divider"></div>
+                <p class="chollo-link">
+                    <a href="@chollo.Link" target="_blank">@chollo.Link</a>
+                </p>
+                <div class="chollo-description">
+                    @Html.Raw(chollo.Descripcion)
+                </div>
+            </div>
+        }
+
+        <footer>
+            <p>© @DateTime.Now.Year Chollometro - Todos los derechos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>

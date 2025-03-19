@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobChollometro", "WebJobChollometro\WebJobChollometro.csproj", "{9941AC69-632B-4F43-8B73-39E09D11230E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcNetCoreChollometro", "MvcNetCoreChollometro\MvcNetCoreChollometro.csproj", "{4E12B901-A2BB-4EDE-AAF4-21096D3DB07C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9941AC69-632B-4F43-8B73-39E09D11230E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9941AC69-632B-4F43-8B73-39E09D11230E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9941AC69-632B-4F43-8B73-39E09D11230E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E12B901-A2BB-4EDE-AAF4-21096D3DB07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E12B901-A2BB-4EDE-AAF4-21096D3DB07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E12B901-A2BB-4EDE-AAF4-21096D3DB07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E12B901-A2BB-4EDE-AAF4-21096D3DB07C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
